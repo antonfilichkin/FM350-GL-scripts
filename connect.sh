@@ -42,7 +42,7 @@ check_internet() {
 }
 
 check_dependencies() {
-    local DEPS="lsusb stty timeout iptables ipcalc"
+    local DEPS="lsusb stty timeout iptables ipcalc udev"
     for DEP in $DEPS; do
         if ! command -v "$DEP" >/dev/null 2>&1; then
             log_message "Installing $DEP..."
